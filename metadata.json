@@ -1,0 +1,6 @@
+{
+  "name": "AI Company Operating System Blueprint",
+  "description": "An interactive architectural blueprint, system topologist, and starter code generator for a highly modular, enterprise-grade AI Company Operating System (AI-COS) managing hundreds of specialized agent employees.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
