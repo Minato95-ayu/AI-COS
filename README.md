@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# AI-COS Alpha v1.0 – Streaming Pipeline Update
 
-# Run and deploy your AI Studio app
+## Overview
 
-This contains everything you need to run your app locally.
+This update stabilizes the AI-COS execution pipeline by integrating a reliable Ollama streaming adapter for local models.
 
-View your app in AI Studio: https://ai.studio/apps/9f37962d-433d-479e-b51d-4d5491d7ab79
+## Changes
 
-## Run Locally
+* Added robust Ollama streaming adapter.
+* Improved streaming diagnostics with detailed logging.
+* Added request and response debug logs.
+* Verified compatibility with `glm4:latest`.
+* Automatic model discovery using `/api/tags`.
+* Improved handling of streamed NDJSON responses.
+* Added chunk counting and response length diagnostics.
+* Better fallback preparation for Gemini integration.
+* Improved server startup diagnostics.
 
-**Prerequisites:**  Node.js
+## Verified
 
+* ✅ Ollama connection
+* ✅ Model discovery
+* ✅ Streaming API
+* ✅ Chunk reception
+* ✅ Multi-agent pipeline communication
+* ✅ Express server endpoint
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Current Status
+
+Backend streaming is functioning correctly.
+
+Remaining work is limited to frontend event rendering and UI synchronization.
+
+## Next Milestone
+
+* Connect streamed chunks directly to AI-COS frontend nodes.
+* Render live CEO/CTO/Architect responses.
+* Finalize end-to-end multi-agent visualization.
